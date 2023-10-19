@@ -1,0 +1,819 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@400;700&display=swap');
+/*Обнуление*/
+*{
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+*,*:before,*:after{
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+
+nav,footer,header,aside{display: block;}
+
+html,body{
+	height: 100%;
+	width: 100%;
+	font-size: 100%;
+	line-height: 1;
+	font-size: 14px;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+input,button,textarea{font-family:inherit;}
+
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner {padding:0;border:0;}
+a, a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+ol{
+    counter-reset: ol-numbers;
+    list-style: none;
+}
+
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
+/*--------------------*/
+
+body {
+    background-color: #1f2038;
+    background-image: url(../img/Phon.jpg);
+    background-attachment: fixed;
+    color: aliceblue;
+    width: 100%;
+    height: 100%;
+    font-family: 'Fira Sans Condensed', sans-serif;
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 45px;
+    letter-spacing: 0.08em;
+    margin-bottom: 25px;
+    line-height: 52px;
+    margin-top: 30px;
+}
+
+.Title_style_1 {
+    font-weight: 700;
+    font-size: 32px;
+    letter-spacing: 0.08em;
+}
+
+
+.main h4,
+.AH_flex li{
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 25px;
+    margin-bottom: 12px;
+}
+
+.main h5 {
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 19px;
+    margin-bottom: 15px;
+}
+
+.main h6 {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 19px;
+}
+
+/* Общие свойства */
+
+.flipX{
+    transform: scale(1, -1);
+}
+
+.PdLR20{
+    padding: 0 20px 0 20px;
+}
+
+.PdTB20 {
+    padding: 20px 0 20px 0;
+}
+
+.ul_style_1 li{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 17px;
+    margin-bottom: 6px;
+}
+.ul_style_1 ::before{
+    content: '☆';
+    margin-right: 12px;
+    margin-left: 12px;
+}
+
+.ul_style_2 li {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 26px;
+}
+.ul_style_2 ::before {
+    content: '»';
+    margin-right: 12px;
+    margin-left: 12px;
+}
+
+.wrapper h2, .h2_style_1{
+    font-weight: 700;
+    font-size: 30px;
+}
+
+.button_INV {
+    width: min-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+}
+
+/* Кнопка записатись */
+.button_text_INV {
+    text-align: center;
+    letter-spacing: 0.08em;
+    border-radius: 30px;
+    transition-duration: 0.5s;
+    color: blue;
+    background-color: rgb(255, 191, 30);
+    font-weight: 900;
+    box-shadow: 0px 0px 15px rgb(255, 191, 30);
+}
+
+.button_text_INV:hover {
+    background-color: rgb(25, 151, 254);
+    box-shadow: 0px 0px 15px rgb(25, 132, 254);
+    color: rgb(255, 191, 30);
+
+}
+
+/* -------------- */
+
+/* Top menu */
+
+.TopMenuSection {
+    top: 0;
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    background-color: blueviolet;
+    z-index: 1000;
+}
+
+.TM_wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* border:  solid red; */
+}
+
+.TM_menu{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    /* border:  solid green; */
+}
+
+.TM_nav{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    flex: 1 1 100%;
+    transition: right 0.3s ease;
+}
+
+.TM_list {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    /* border: solid rgb(59, 43, 205); */
+}
+
+.TM_link {
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    font-size: 18px;
+    color: rgb(234, 211, 255);
+    transition-duration: 0.4s;
+    cursor: pointer;
+    align-self: center;
+}
+
+.TM_link:hover {
+    transform: scale(1.09, 1.09);
+    color: rgb(250, 99, 255);
+}
+
+.header_logo {
+    height: 80px;
+}
+
+.TM_button{
+    margin: 0 20px 0 20px;
+    /* border: solid red; */
+}
+
+.TM_button_text {
+    font-size: 15px;
+    padding: 15px 15px 15px 15px;
+    /* border: solid red; */
+}
+
+.TM_button_text:hover {
+    background-color: rgb(25, 151, 254);
+    box-shadow: 0px 0px 15px rgb(25, 132, 254);
+    color: rgb(255, 191, 30);
+}
+
+.header_logo{
+    margin: 0 20px 0 20px;
+}
+
+@media (max-width:768px){
+
+    /* TM_BurgerIcon */
+    .TM_BurgerIcon{
+        top: 28px;
+        display: none;
+        width: 30px;
+        height: 18px;
+        position: relative;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+    }
+
+    .TM_BurgerIcon span,
+    .TM_BurgerIcon:before,
+    .TM_BurgerIcon:after {
+        position: absolute;
+        width: 100%;
+        height: 10%;
+        background-color: rgb(255, 255, 255);
+        transition: transform 0.3s ease;
+    }
+
+    .TM_BurgerIcon:before,
+    .TM_BurgerIcon:after{
+        content: "";
+    }
+
+    .TM_BurgerIcon:before {
+        top: 0;
+    }
+
+    .TM_BurgerIcon:after {
+        bottom: 0;
+    }
+
+    .TM_BurgerIcon.TM_active {
+        transform: rotate(180deg);
+    }
+
+    .TM_BurgerIcon span{
+        top: 50%;
+        transform: scale(1) translate(0, -50%);
+    }
+
+    .TM_BurgerIcon.TM_active:before {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .TM_BurgerIcon.TM_active:after {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .TM_BurgerIcon.TM_active span{
+        opacity: 0;
+    }
+    /* ------- */
+
+    .TM_nav{
+        position: fixed;
+        width: 100%;
+        height: 80px;
+        top: 80px;
+        left: 0;
+        right: -200%;
+        margin: 0 auto;
+        background-color: blueviolet;
+    }
+    .TM_BurgerIcon{
+        display: block;
+    }
+    .TM_nav.TM_active {
+        right: 0px;
+    }   
+}
+
+@media (max-width:500px){
+    .TM_nav{
+        height: 140px;
+    }
+    .TM_list {
+        height: 100%;
+        margin-left: 20px;
+        padding-top: 10px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .TM_link{
+        margin-bottom: 30px;
+    }
+}
+
+/* END Top menu */
+
+/* =========================================== */
+/* =========================================== */
+/* =========================================== */
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* =========================================== */
+/* =========================================== */
+/* =========================================== */
+/*Header*/
+
+.WellcomeScreen {
+    width: 100%;
+    min-height: 100vh;
+    background-image:  url(../img/Phon1new.jpg);
+    background-size: 100% ,100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    box-shadow: 0px 15px 15px rgb(9, 9, 138);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+@media(max-width:750px){
+    .WellcomeScreen h1{
+        font-size: 30px;
+    }
+}
+
+/* =========================================== */
+/* =========================================== */
+/* =========================================== */
+/* Bottom Header */
+
+.BottomHeader{
+    width: 100%;
+    background-color: rgb(36, 68, 176);
+    box-shadow: 0px 20px 15px rgb(36, 68, 176);
+    z-index: 5;
+}
+
+.BH_container{
+    min-height: 250px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap
+}
+
+.BH_container div{
+    margin: 20px 0 0 20px;
+    /* border: solid red; */
+    display: flex;
+    flex-direction: column;
+}
+
+.BH_container h2, li{
+    align-self: flex-start;
+}
+
+.BH_ul1 {
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.BH_button {
+    margin: 20px 20px 20px 20px;
+    margin-right: 20px;
+}
+
+.BH_button_text {
+    font-size: 15px;
+    padding: 20px 20px 20px 20px;
+}
+
+.button_text:hover {
+    background-color: rgb(25, 151, 254);
+    box-shadow: 0px 0px 15px rgb(25, 132, 254);
+    color: rgb(255, 191, 30);
+
+}
+
+/*--------------------------*/
+/* =========================================== */
+/* =========================================== */
+/* =========================================== */
+
+.container_2_flex{
+    align-self: flex-end;
+}
+
+.container_2{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.title_1_flex,
+.title_bottom_flex{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.right_left{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.right_column,
+.left_column {
+    width: 300px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 15px;
+}
+
+/*Свойства текста*/
+.right_column img {
+    width: 75%;
+    margin-bottom: 30px;
+}
+
+.title_bottom_flex img{
+    transform: scale(1, -1)
+}
+
+.right_column h5 {
+    margin-bottom: 25px;
+    margin-left: 10px;
+}
+
+.right_column h4 {
+    margin-bottom: 16px;
+}
+
+.left_column h4 {
+    margin-bottom: 12px;
+}
+
+.left_column ul {
+    margin-bottom: 54px;
+    margin-left: 10px;
+}
+
+/*--------------------------*/
+/* =========================================== */
+/* =========================================== */
+/* =========================================== */
+/*Змагання*/
+.container_3_flex {
+    display: flex;
+    flex-direction: column;
+    max-width: max-content;
+    align-items: center;
+    height: auto;
+    margin-top: 0px;
+    margin-left: 20px;
+}
+
+.title_3 {
+    align-self: center;
+}
+
+.title_3_h2 {
+    display: flex;
+    justify-content: center;
+}
+
+.container_3_content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.left_column2 {
+    align-self: flex-start;
+    margin-right: 25px;
+}
+
+.right_column2 {
+    align-self: flex-end;
+}
+
+.container_3_flex h4 {
+    margin-bottom: 18px
+}  
+
+.container_3_flex ul {
+    margin-bottom: 40px;
+    margin-left: 10px;
+}
+
+.title_vector8 {
+    align-self: center;
+    transform: scale(1, -1)
+}
+
+.r {
+    margin-bottom: 8px;
+}
+
+@media(max-width:480px){
+    .right_column2 img,
+    .title_vector8 img,
+    .title_3 img {
+        width: 80%;
+    }
+}
+
+@media(max-width:800px){
+    .container_3_content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+/*--------------------------*/
+/* =========================================== */
+/* =========================================== */
+/* =========================================== */
+/*Наші досягнення*/
+
+.container_4{
+    align-self: flex-end;
+}
+
+.AH_flex{
+    max-width: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.AH_title,
+.AH_bottom_title{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.AH_content{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.AH_RightColumn img{
+    width: 230px;
+    margin-left: 10px;
+}
+.AH_bottom_title img{
+    transform: scale(1, -1)
+}
+
+/* Стили списка */
+.AH_content ol{
+    position: relative;
+}
+
+.AH_content ol:first-child{
+    margin-top: 40px;
+}
+.AH_content li {
+    margin-bottom: 80px;
+}
+
+.AH_content li{
+    position: relative;
+}
+
+.AH_content li::before{
+    counter-increment: ol-numbers;
+    content: " ";
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    width: 120px;
+    height: 120px;
+    text-align: center;
+    background-color: rgba(0, 255, 255, 0.365);
+    border-radius: 50%;
+    z-index: -1;
+}
+.AH_content .LiBg1::before{
+    background-color: rgba(255, 234, 0, 0.5);
+}
+.AH_content .LiBg2::before {
+    background-color: rgba(153, 153, 153, 0.5);
+}
+.AH_content .LiBg3::before {
+    background-color: rgba(255, 130, 20, 0.5);
+}
+
+@media(max-width:480px){
+    .AH_title img,
+    .AH_bottom_title img{
+        width: 80%;
+    }
+}
+
+@media(max-width:650px) {
+    .AH_content{
+        flex-direction: column;
+    }
+    
+}
+
+/*-----------*/
+/* =========================================== */
+/* =========================================== */
+/* =========================================== */
+/*Футер*/
+
+footer {
+    width: 100%;
+    margin-top: 20%;
+    padding: 40px 0 40px 0;
+    background-color: rgb(0, 3, 40);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer_flex_content h6 {
+    display: flex;
+    flex-direction: column;
+    max-width: 800px;
+    align-items: center;
+    justify-content: space-between;
+    height: 40px;
+}
+
+.footer_flex_content h2 {
+    display: flex;
+    flex-direction: column;
+    max-width: 800px;
+    align-items: center;
+    justify-content: space-between;
+    height: 90px;
+}
+
+/*Дикорация текста*/
+.footer_flex_content {
+    letter-spacing: 0.2em;
+}
+
+@media(max-width:500px) {
+    footer h6 {
+        font-size: 13px;
+    }
+
+    footer .h2 {
+        font-size: 20px;
+    }
+}
+
+/*--------------------------*/
+/* =========================================== */
+/* =========================================== */
+/* =========================================== */
+/*Брейкпоинты*/
+
+@media (max-width:768px) {
+    .right_left {
+        align-items: center;
+        width: min-content;
+        margin: 0 auto;
+    }
+
+    .right_column img {
+        align-self: center;
+        width: 100%;
+    }
+
+    .left_column {
+        margin-right: 0
+    }
+
+    .container_3_content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .left_column2,
+    .right_column2,
+    .left_column img {
+        align-self: center;
+        margin: 0;
+    }
+
+    .container_2_flex,
+    .container_3_flex,
+    .container_4,
+    footer {
+        align-self: center;
+    }
+}
+
+/*--------------------------*/
+
+/*Классы _active И _Anim-Items*/
+
+.right_left img ._active {
+    animation-name: AnimImg1;
+    animation-duration: 0.8s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.5s;
+}
+
+/*==============================================================================================================================================*/
+
+/*Transition*/
+@media(min-width:425px) {
+    ._active .title h3 {
+        transform: translate(0);
+        transition-duration: 0.8s;
+        color: aliceblue;
+    }
+}
+    
+.svg1{
+    /* border: solid red; */
+    width: 100%;
+    height: 300px;
+}
+.svg1 svg{
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+
+@media(max-width: 425px) {
+    .wrapper>section, .dynamic1 {
+        transform: scale(0.8, 0.8);
+    }
+    .svg1{
+        display: none;
+    }
+}
+
+@media(max-width: 330px) {
+    .wrapper>section, .dynamic1 {
+        transform: scale(0.6, 0.6);
+    }
+
+    .svg1 {
+        display: none;
+    }
+}
+
+
